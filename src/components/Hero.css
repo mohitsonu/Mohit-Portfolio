@@ -1,0 +1,125 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 650px;
+  z-index: 2;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.greeting {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.name {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.role {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.bio {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #e2e8f0; /* Ultra bright for readability */
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: #000;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-color);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 3rem;
+  }
+  .role {
+    font-size: 1.5rem;
+  }
+  .hero-content {
+    padding: 20px;
+  }
+}

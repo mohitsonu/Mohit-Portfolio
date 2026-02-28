@@ -1,0 +1,112 @@
+.contact-section {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 20px;
+}
+
+.contact-container {
+  display: block;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info, .contact-form {
+  padding: 40px;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.info-icon {
+  color: var(--accent-color-alt);
+}
+
+.info-item a {
+  transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+  color: var(--accent-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent-color);
+  color: #000;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+}
+
+.footer {
+  margin-top: 80px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

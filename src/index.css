@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #02040a; /* Ultra Deep SaaS Navy */
+  --bg-color-rgb: 2, 4, 10;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1; /* Brighter slate for better readability */
+  --accent-color: #38bdf8; /* Clean Sky Blue */
+  --accent-color-rgb: 56, 189, 248;
+  --accent-color-alt: #818cf8; /* Soft Indigo */
+  --card-bg: rgba(30, 41, 59, 0.4); /* Elegant slate glass */
+  --card-border: rgba(255, 255, 255, 0.08);
+  --header-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* App Layout */
+.app-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.canvas-container {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* Let clicks pass through to content */
+}
+
+/* Very subtle background gradient */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Typography Utilities */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-alt) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 4px;
+}
